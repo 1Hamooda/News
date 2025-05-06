@@ -273,7 +273,6 @@ while ($row = $newsResult->fetch_assoc()) {
                             <a href="view-news.php?id=<?= $item['id'] ?>" class="btn btn-sm btn-info">عرض</a>
                             <a href="approve-news.php?id=<?= $item['id'] ?>&action=approve" class="btn btn-sm btn-success">قبول</a>
                             <a href="approve-news.php?id=<?= $item['id'] ?>&action=deny" class="btn btn-sm btn-danger">رفض</a>
-                            <a href="delete-news.php?id=<?= $item['id'] ?>" class="btn btn-sm btn-secondary" onclick="return confirm('هل أنت متأكد من حذف هذا المقال؟')">حذف</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

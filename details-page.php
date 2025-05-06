@@ -7,38 +7,99 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Document</title>
 </head>
+<style>
+    /* Enhanced Navbar Styles */
+    .navbar {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-nav {
+        margin-left: 0 !important;
+        margin-right: auto;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-radius: 0.25rem;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+    
+    .navbar-brand {
+        padding: 0;
+        margin-left: 1rem;
+    }
+    
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            padding: 1rem 0;
+        }
+        .nav-item {
+            margin: 0.25rem 0;
+        }
+        .d-flex.me-auto {
+            margin-right: 0 !important;
+            margin-top: 1rem;
+        }
+    }
+</style>
 <body>
 
-    <nav class="navbar d-flex justify-content-between navbar-expand-lg text-light" style="background-color: #063a6e;">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-    <img class= "navbar-toggler-icon" src="News WebPage\Photos\game.png" alt="">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">مراجعات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">إصدارات </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">ثقافة الألعاب</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">إرشادات ونصائح</a></li>
-                </ul>
-                <form class="d-flex me-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="بحث" aria-label="بحث"
-                        style="direction: rtl;">
-                </form>
-            </div>
-            <div class="row d-flex me-auto">
-              <div class="row">
-                <div class="col">8 °C</div>
-                <div class="col">الدوحة</div>
-              </div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #063a6e;">
+    <div class="container-fluid">
+        <!-- Brand/Logo on the right -->
+        <a class="navbar-brand me-0" href="front-page.php">
+            <img src="News WebPage/Photos/game.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+        </a>
+        
+        <!-- Toggler on the left -->
+        <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Navigation links - aligned right -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="front-page.php">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">مراجعات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">إصدارات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ثقافة الألعاب</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">إرشادات ونصائح</a>
+                </li>
+            </ul>
+            
+            <!-- Search form - properly aligned -->
+            <form class="d-flex me-auto ms-3" role="search">
+                <input class="form-control" type="search" placeholder="بحث" aria-label="بحث" style="width: 200px;">
+            </form>
+            
+            <!-- Weather info - aligned left -->
+            <div class="d-flex text-white align-items-center me-3">
+                <div class="text-end">
+                    <div>8 °C</div>
+                    <div>الدوحة</div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
     
     <main class="container mt-2">
         <!-- Header Section -->

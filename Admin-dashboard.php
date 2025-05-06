@@ -177,9 +177,7 @@ while ($row = $usersResult->fetch_assoc()) {
                     <li class="nav-item">
                         <a class="nav-link active" href="admin-dashboard.php">المستخدمون</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="manage-categories.php">إدارة التصنيفات</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">تسجيل الخروج</a>
                     </li>
@@ -224,7 +222,7 @@ while ($row = $usersResult->fetch_assoc()) {
                             <?= $roleText ?>
                         </td>
                         <td>
-                            <a href="edit-user.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-warning">تعديل</a>
+                            <a href="update-user.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-warning">تعديل</a>
                             <?php if ($user['id'] != $_SESSION['user_id']): ?>
                             <a href="delete-user.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('هل أنت متأكد من حذف هذا المستخدم؟')">حذف</a>
                             <?php endif; ?>

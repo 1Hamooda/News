@@ -313,13 +313,12 @@ while ($row = $result->fetch_assoc()) {
                             <span class="<?= $statusClass ?>"><?= $statusText ?></span>
                         </td>
                         <td>
-                            <div class="d-flex">
-                                <a href="view-news.php?id=<?= $item['id'] ?>" class="btn btn-sm btn-info">عرض</a>
-                                <?php if ($item['status'] == 'pending' || $item['status'] == 'denied'): ?>
-                                <a href="edit-news.php?id=<?= $item['id'] ?>" class="btn btn-sm btn-warning">تعديل</a>
-                                <?php endif; ?>
-                            </div>
-                        </td>
+    <a href="remove-news.php?id=<?= $item['id'] ?>" 
+       class="btn btn-sm btn-danger"
+       onclick="return confirm('هل أنت متأكد من حذف هذا المقال؟')">
+       حذف
+    </a>
+</td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

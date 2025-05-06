@@ -197,6 +197,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             opacity: 0.95;
         }
 
+        .guest-button {
+            background: white;
+            color: var(--dark);
+            border: 2px solid #e2e8f0;
+            margin-top: 15px;
+            box-shadow: none;
+        }
+
+        .guest-button:hover {
+            background: #f8fafc;
+            border-color: var(--primary-light);
+            color: var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
         /* Animations */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
@@ -239,7 +261,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <button type="submit">Login</button>
+            <div class="button-group">
+                <button type="submit">Login</button>
+                <a href="front-page.php" class="guest-button" style="text-decoration: none; text-align: center;">Continue as Guest</a>
+            </div>
         </form>
     </div>
 </body>
